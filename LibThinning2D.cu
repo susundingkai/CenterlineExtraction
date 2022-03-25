@@ -56,7 +56,7 @@ void Thinning2D(int width, int height, PixelType *data, PixelType *out)
 	// ----------------------------------------------------------------------------------------------------------------------------
 
 	// Pad image to multiple of 32 pixels and power of 2 in x-dimension and height to (a*ny*by+(a-1)*overlapRows)
-	const int overlap = 64;
+	const int overlap = 63;
 	const int ny = 8;
 	int sx = 32;
 	while (sx < width) sx <<= 1;
