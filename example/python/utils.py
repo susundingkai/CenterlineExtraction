@@ -8,7 +8,7 @@ from platform import system
 def CenterlineExtraction(img,pruned,smooth):
     #加载DLL
     if system() == 'Windows':
-        pDLL = WinDLL("./centerline.dll",winmode=0)
+        pDLL = WinDLL("./libMySharedLib.dll",winmode=0)
     elif system()=='Linux':
         pDLL = cdll.LoadLibrary("./libMySharedLib.so")
     pDLL.CenterlineExtraction.restype=ctypes.c_uint
